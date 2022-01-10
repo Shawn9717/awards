@@ -15,15 +15,14 @@
     
           <h2 class="text-center" style="margin-top: 3rem;">Login</h2>
           {% if form.errors %}
-          <p>Your username and password didn't match. Please try again.</p>
+          <p>Your username and password didn't match. Please enter correctly.</p>
         {% endif %}
       
         {% if next %}
           {% if user.is_authenticated %}
-            <p>Your account doesn't have access to this page. To proceed,
-            please login with an account that has access.</p>
+            <p>Your account doesn't have access to this page.please register</p>
           {% else %}
-            <p>Please login to see this page.</p>
+            <p>Please login.</p>
           {% endif %}
         {% endif %}
       <div class="container">
@@ -43,7 +42,7 @@
           <input type="hidden" name="next" value="{{ next }}" />
         </form>
       
-   Don't have an create an account? <a href="{% url 'users:register' %}">Register</a>
+   Don't have an  account please create one? <a href="{% url 'users:register' %}">Register please</a>
       </div>
     </div>
 
