@@ -1,0 +1,44 @@
+
+    {%extends "base.html"%}
+    {% load bootstrap3 %}
+    {% block content %}
+    {% include "home/navbar.html" %}
+    <style>
+        body {
+            background-image: url(https://images.unsplash.com/photo-1513151233558-d860c5398176?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8YXdhcmR8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60);
+            background-repeat: no-repeat;
+            background-size: cover;
+
+        }
+    </style>
+    <body>
+    <div class="container" style="font-family: 'Jost', sans-serif;">
+        <div class="row">
+
+            <div class="col-md-6 mx-auto card p-5 mt-5">
+                <div class="panel panel-default">
+
+                    <div class="panel-heading">
+                        <h3 class="text-center">Add Project</h3>
+                    </div>
+                    <div class="panel-body">
+
+                        <form action="{%url 'homepage:new_project'%}" method="post" enctype="multipart/form-data">
+                            {% csrf_token %}
+                            {% bootstrap_form form %}
+                            <div class="form-group">
+                                <input type="submit" class="btn btn-primary btn-sm" value="Post">
+                            </div>
+                            <input type="hidden" name="next" value="{{next}}">
+
+                        </form>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div><br><br><br>
+</body>
+    {% endblock %}
+</div>

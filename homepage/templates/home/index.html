@@ -1,0 +1,44 @@
+<div class="" style="font-family: 'Jost', sans-serif;">
+    {%extends 'base.html'%}
+    {% load ratings %}
+    {%block content%}
+    <style>
+        body {
+            background-color: #c2c5aa;
+        }
+    </style>
+    {% include "home/navbar.html" %}
+    <body>
+    <div class="container-fluid">
+
+        <div class="jumbotron jumbotron-fluid">
+            <div class="container">
+                <h2 class="display-4">Awwards</h2>
+                <p class="lead">Check out projects done by others and review them.You can also add yours and let others review you!.<br>This helps to meature your skill set and realize on the areas you could improve on<br>
+                    <center><strong>Happy Reviewing {{user.username}}!!</strong></center>
+                </p>
+            </div>
+        </div>
+        <h3>Projects</h3><hr>
+        <div class="row">
+            {% for project in projects %}
+            <div class="col-md-3">
+                <div class="card">
+                    <div class="view view-cascade overlay">
+                        <img src="{{project.project_image.url}}" class="img-fluid" alt="">
+                        <a href="projects/{{project.id}}">
+                            <div class="mask rgba-white-slight"></div>
+                        </a>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="">{{project.title}}</h5>
+                        <a href="projects/{{project.id}}">Readmore</a>
+                    </div>
+                </div>
+            </div>
+            {%endfor%}
+        </div>
+    </div>
+</body>
+    {%endblock%}
+</div>
