@@ -128,9 +128,9 @@ TEMPLATES = [
 WSGI_APPLICATION = 'proawwards.wsgi.application'
 
 cloudinary.config( 
-  cloud_name = "dgjtu9gvn", 
-  api_key = "129752669554243", 
-  api_secret = "9f7PWZty2n1W_CfRccWscy27JWQ" 
+  cloud_name="dgjtu9gvn", 
+  api_key="129752669554243", 
+  api_secret="9f7PWZty2n1W_CfRccWscy27JWQ",
 )
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
