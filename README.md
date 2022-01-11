@@ -96,7 +96,7 @@ Projects will be rated/reviewed based on the following criteria:
 
 ## Bugs
 
-    If you encounter any bugs, email me on melissamalala@gmail.com. If you would like to add some changes, please feel free to
+    If you encounter any bugs, email me on shawnnjoga@gmail.com If you would like to add some changes, please feel free to
 fork the project and make a pull request.
 
 ## Authors
